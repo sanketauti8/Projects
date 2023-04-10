@@ -1,7 +1,0 @@
-pip install flask
-pip install jwt
-pip install uuid
-pip install werkzeug
-pip install SQLAlchemy
-pip install functools
-pip install datetime
