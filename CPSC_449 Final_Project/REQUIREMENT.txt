@@ -1,0 +1,5 @@
+pip install fastapi
+pip install pydantic
+pip install pymongo
+pip install uvicorn 
+pip install motor
