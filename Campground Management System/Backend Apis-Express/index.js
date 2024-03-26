@@ -9,10 +9,7 @@ const app = express();
 app.use(express.json());
 
 
-//https://cloud.mongodb.com/v2/65c28d7fea79b0467f4f779b#/metrics/replicaSet/65f5f255528b1610120739be/explorer/campgrounds/campgrounds/find
 
-//  Local:            http://localhost:3000
-//On Your Network:  http://192.168.0.37:3000
 /*
 npm install cors
 */
@@ -39,8 +36,6 @@ const corsOptions = {
 // mongoose.connect('mongodb://localhost:27017/Campground', { useNewUrlParser: true, useUnifiedTopology: true })
 //     .then(() => console.log('MongoDB connected'))
 //     .catch(err => console.error(err));
-//CONNECTION_STRING=mongodb://localhost:27017; sanketauti 2HDBw7Tu7p50dhh0  2HDBw7Tu7p50dhh0
-
 
 
 //create/insert camp info
@@ -100,30 +95,6 @@ app.get('/reservationprice/:no_of_people/:_id', async (req, res) => {
 });
 
 
-//book camp
-// app.get('/bookcampground/:_id', async (req, res) => {
-//     try {
-//         const _id = req.params._id;
-//         const campgrounds = await Campground.findById(_id);
-//         if (!campgrounds) {
-//             res.status(404);
-//             throw new Error("Campground not found!");
-//         }
-//         console.log(campgrounds.reserved);
-//         if(campgrounds.reserved){
-//             res.json({ message: "Sorry, This camp is already booked!!"}); 
-//         }else{
-
-//         // Update reserved field to true
-//         campgrounds.reserved = true;
-//         await campgrounds.save();
-
-//         res.json({ message: "Campground booked successfully on "+ Date() });
-//         }
-//     } catch (err) {
-//         res.status(500).json({ message: err.message });
-//     }
-// });
 
 app.get('/bookcampground/:_id', async (req, res) => {
     try {
