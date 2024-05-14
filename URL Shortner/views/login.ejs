@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(206, 202, 126);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <hr><br>
+    <form action="/user/login" method="post">
+        <label>Email</label>
+        <input type="text" required name="email">
+        <label>Password</label>
+        <input type="text" required name="password">
+        <button type="submit">Submit</button>
+    </form>
+    <br><hr>
+    <div><p>new user</p>
+    <button type="button" id="signup">signup</button>
+    </div>
+    <script>
+        // Add an event listener to the signup button
+        document.getElementById("signup").addEventListener("click", function() {
+            // Redirect the user to the signup page
+            window.location.href = "/signup";
+        });
+    </script>
+</body>
+</html>
